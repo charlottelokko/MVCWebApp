@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Client</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1 style="text-align:center">Contacts Client using REST API </h1>
+    <p style="text-align:center"><a href="/">Home Page</a></p>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h2>Contacts:</h2>
+            <table style="width:70%">
+                <tr><td width="30%">ID</td><td width="70%"><span id="cid"></span></td></tr>
+                <tr><td>First Name</td><td><input id="first" type="text"></td></tr>
+                <tr><td>Last Name</td><td><input id="last" type="text"></td></tr>
+                <tr><td>Email</td><td><input id="email" type="text" style="width: 300px;"></td></tr>
+                <tr><td>Phone</td><td><input id="phone" type="text"></td></tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="save" onclick="saveContact()" disabled="disabled">Save Contact</button>
+                        &nbsp;<button id="add" onclick="addContact()">New Contact</button>
+                    </td>
+                </tr>
+            </table>
+            <table id="contacts" class="table">
+                <thead>
+                    <tr>
+                        <th width="5%">Id</th>
+                        <th width="20%">First Name</th>
+                        <th width="20%">Last Name</th>
+                        <th width="20%">Email</th>
+                        <th width="15%">Phone</th>
+                        <th width="15%">Operation</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ContactScripts.js"></script>
+</body>
+</html>
